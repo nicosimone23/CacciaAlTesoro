@@ -41,19 +41,27 @@
         </div>
     </nav>
     <form>
-<input type="text" id="username" />
-<label>Password</label>
-<input type="password" id="password"/>
-<button type="submit" onclick="doLogin()">Login</button>
-
-<script>
-function doLogin() {
-var username = document.getElementById ("username") . value;
-var password = document.getElementById ("password") . value;
-if (username== ""; password=="") {
-alert ("Username e password sono obbligatori") ;
-}
-}
+<div class "container">
+    <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+    <form>
+    <div class "mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" class "form-control" id "username">
+    </div>
+    <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type "password" class "form-control" id "password">
+    <button type="submit" class="btn btn-primary" onclick="doLogin ()" Login</button>
+    </div>
+    </form>
+    </div>
+    <div class="col">
+    </div>
+    </div>
+    </div>
 
     </form>
     <script src="Script/script.js"></script>
