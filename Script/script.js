@@ -11,8 +11,21 @@ function doLogin(event) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        "username": username,
-        "password": password
+        fetch('https://www.cacciaapi.altervista.org/login-php/login-php/loginIpad.php', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify([
+    { nome: "Gioco1", codice: "Game1", stato: "non attivo" },
+    { nome: "Gioco2", codice: "Game2", stato: "attivo" },
+    { nome: "Gioco3", codice: "Game3", stato: "non attivo" },
+    { nome: "Gioco4", codice: "Game4", stato: "attivo" }
+  ])
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error("Si è verificato un errore:", error));
       })
     })
     .then(response => response.json())
