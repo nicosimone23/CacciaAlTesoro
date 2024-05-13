@@ -22,6 +22,15 @@ function doLogin(event) {
     { nome: "Gioco3", codice: "Game3", stato: "non attivo" },
     { nome: "Gioco4", codice: "Game4", stato: "attivo" }
   ])
+    { "nome": "Mario", "cognome": "Rossi", "età": 30}
+     
+     { "nome_corso": "Programmazione",
+"studenti": [
+{ "nome": "Luca", "cognome": "Bianchi" },
+{ "nome": "Giulia", "cognome": "Verdi" }
+]
+}
+]
 })
 .then(response => response.json())
 .then(data => console.log(data))
